@@ -17,6 +17,7 @@ Now let's go back to the notebook `04-idp-document-a2i.ipynb`. **Start running t
 - Then go to **Amazon SageMaKer** -> Labeling workforces
     ![s20](/images/6/s20.png)
 - Click to Labeling portal sign-in URL
+    ![stemp](/images/6/stemp.png)
     ![s21](/images/6/s21.png)
 - Login to the labelling/human review portal. You should have received an email with a link to the Labeling/human review portal with details about how to login and a portal URL. Follow the instructions in the email, you will need to reset your password to login.
 - You can see that a human review task has been added. Select the job and click on **Start Working**.

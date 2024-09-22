@@ -12,21 +12,21 @@
     <title>Xác minh :: AWS System Manager</title>
 
     
-    <link href="/css/nucleus.css?1726990308" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1726990308" rel="stylesheet">
-    <link href="/css/hybrid.css?1726990308" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1726990308" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1726990308" rel="stylesheet">
-    <link href="/css/auto-complete.css?1726990308" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1726990308" rel="stylesheet">
-    <link href="/css/theme.css?1726990308" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1726990308" rel="stylesheet">
+    <link href="/css/nucleus.css?1726990570" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1726990570" rel="stylesheet">
+    <link href="/css/hybrid.css?1726990570" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1726990570" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1726990570" rel="stylesheet">
+    <link href="/css/auto-complete.css?1726990570" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1726990570" rel="stylesheet">
+    <link href="/css/theme.css?1726990570" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1726990570" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1726990308" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1726990570" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1726990308"></script>
+    <script src="/js/jquery-3.3.1.min.js?1726990570"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1726990308"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1726990308"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1726990570"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1726990570"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/thien0301v.github.io\/\/vi";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1726990308"></script>
+<script type="text/javascript" src="/js/search.js?1726990570"></script>
 
     
   </div>
@@ -747,23 +747,39 @@
 
 	<p>Bây giờ hãy quay lại notebook <code>04-idp-document-a2i.ipynb</code>. <strong>Bắt đầu chạy các ô mã từ đầu. Bạn sẽ cần cung cấp một số thông tin khi tiến hành.</strong></p>
 <ul>
-<li>Nhập tên S3 bucket <code>idp-a2i-xxxxxx</code> để khởi tạo biến BUCKET. Chúng ta sẽ sử dụng biến BUCKET này trong suốt notebook.
-<img alt="s16" src="/images/6/s16.png"></li>
-<li>Bạn sẽ cần cung cấp ARN của nhóm làm việc riêng tư mà bạn đã tạo trước đó. Để tìm ARN của nhóm làm việc, hãy nhấp vào Quy trình làm việc xem xét con người mà bạn đã tạo trước và sao chép ARN từ phần Tóm tắt trong mục Lực lượng lao động. Nó sẽ có dạng <code>&lt;arn:aws:sagemaker:&lt;region&gt;:&lt;account_id&gt;:workteam/private-crowd/&lt;team-name&gt;</code>. Nhập giá trị này để khởi tạo <code>WORKTEAM_ARN</code> trong notebook.
-<img alt="s17" src="/images/6/s17.png"></li>
-<li>Bây giờ chúng ta đã thiết lập định nghĩa Quy trình A2I, tất cả những gì còn lại là gọi Amazon Textract&rsquo;s Analyze Document API bao gồm các tham số A2I trong HumanLoopConfig. Cung cấp ARN quy trình A2I sẽ được <strong>Amazon Textract</strong> sử dụng. Bạn có thể tìm thấy ARN quy trình trong màn hình <strong>Summary</strong> lực lượng lao động xem xét con người.
-<img alt="s18" src="/images/6/s18.png"></li>
-<li>Thực hiện ô mã để thực hiện <code>AnalyzeDocument</code>. Khi dữ liệu được trích xuất bằng Amazon Textract, các cặp khóa-giá trị sẽ xuất hiện trong cổng thông tin phân loại cho việc xem xét của con người.
-<img alt="s19" src="/images/6/s19.png"></li>
-<li>Sau đó, hãy vào <strong>Amazon SageMaKer</strong> -&gt; <strong>Labeling workforces</strong>
-<img alt="s20" src="/images/6/s20.png"></li>
-<li>Nhấp vào URL đăng nhập cổng phân loại
-<img alt="s21" src="/images/6/s21.png"></li>
-<li>Đăng nhập vào cổng phân loại/xem xét của con người. Bạn sẽ nhận được một email với liên kết đến cổng phân loại/xem xét con người với thông tin chi tiết về cách đăng nhập và một URL cổng. Làm theo hướng dẫn trong email, bạn sẽ cần đặt lại mật khẩu để đăng nhập. <strong>Start Working</strong>.
+<li>
+<p>Nhập tên S3 bucket <code>idp-a2i-xxxxxx</code> để khởi tạo biến BUCKET. Chúng ta sẽ sử dụng biến BUCKET này trong suốt notebook.
+<img alt="s16" src="/images/6/s16.png"></p>
+</li>
+<li>
+<p>Bạn sẽ cần cung cấp ARN của nhóm làm việc riêng tư mà bạn đã tạo trước đó. Để tìm ARN của nhóm làm việc, hãy nhấp vào Quy trình làm việc xem xét con người mà bạn đã tạo trước và sao chép ARN từ phần Tóm tắt trong mục Lực lượng lao động. Nó sẽ có dạng <code>&lt;arn:aws:sagemaker:&lt;region&gt;:&lt;account_id&gt;:workteam/private-crowd/&lt;team-name&gt;</code>. Nhập giá trị này để khởi tạo <code>WORKTEAM_ARN</code> trong notebook.
+<img alt="s17" src="/images/6/s17.png"></p>
+</li>
+<li>
+<p>Bây giờ chúng ta đã thiết lập định nghĩa Quy trình A2I, tất cả những gì còn lại là gọi Amazon Textract&rsquo;s Analyze Document API bao gồm các tham số A2I trong HumanLoopConfig. Cung cấp ARN quy trình A2I sẽ được <strong>Amazon Textract</strong> sử dụng. Bạn có thể tìm thấy ARN quy trình trong màn hình <strong>Summary</strong> lực lượng lao động xem xét con người.
+<img alt="s18" src="/images/6/s18.png"></p>
+</li>
+<li>
+<p>Thực hiện ô mã để thực hiện <code>AnalyzeDocument</code>. Khi dữ liệu được trích xuất bằng Amazon Textract, các cặp khóa-giá trị sẽ xuất hiện trong cổng thông tin phân loại cho việc xem xét của con người.
+<img alt="s19" src="/images/6/s19.png"></p>
+</li>
+<li>
+<p>Sau đó, hãy vào <strong>Amazon SageMaKer</strong> -&gt; <strong>Labeling workforces</strong>
+<img alt="s20" src="/images/6/s20.png"></p>
+</li>
+<li>
+<p>Nhấp vào URL đăng nhập cổng phân loại
 <img alt="stemp" src="/images/6/stemp.png">
-<img alt="s22" src="/images/6/s22.png"></li>
-<li>Bây giờ bạn có thể xem thông tin đã được trích xuất ở bên phải, để xác minh và thực hiện các thay đổi nếu cần. Gửi công việc khi hoàn thành. Bạn cũng có tùy chọn từ chối và phát hành nhiệm vụ nếu cần.
-<img alt="s23" src="/images/6/s23.png"></li>
+<img alt="s21" src="/images/6/s21.png"></p>
+</li>
+<li>
+<p>Đăng nhập vào cổng phân loại/xem xét của con người. Bạn sẽ nhận được một email với liên kết đến cổng phân loại/xem xét con người với thông tin chi tiết về cách đăng nhập và một URL cổng. Làm theo hướng dẫn trong email, bạn sẽ cần đặt lại mật khẩu để đăng nhập. <strong>Start Working</strong>.</p>
+<p><img alt="s22" src="/images/6/s22.png"></p>
+</li>
+<li>
+<p>Bây giờ bạn có thể xem thông tin đã được trích xuất ở bên phải, để xác minh và thực hiện các thay đổi nếu cần. Gửi công việc khi hoàn thành. Bạn cũng có tùy chọn từ chối và phát hành nhiệm vụ nếu cần.
+<img alt="s23" src="/images/6/s23.png"></p>
+</li>
 </ul>
 <h3 id="conclusion">Conclusion</h3>
 <p>Trong notebook này, chúng ta đã tạo một quy trình xem xét con người A2I cho <strong>Amazon Textract</strong> bao gồm một nhóm làm việc riêng tư sử dụng <strong>Amazon Augmented AI</strong>. Sau đó, chúng ta đã sử dụng <strong>Amazon Textract</strong> để trích xuất dữ liệu từ một tài liệu mẫu và thêm một Vòng cấu hình con người cho việc xem xét của con người. Cuối cùng, chúng ta đã thực hiện một nhiệm vụ xem xét thủ công thông qua một cổng tùy chỉnh.</p>
@@ -1111,19 +1127,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1726990308"></script>
-    <script src="/js/perfect-scrollbar.min.js?1726990308"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1726990308"></script>
-    <script src="/js/jquery.sticky.js?1726990308"></script>
-    <script src="/js/featherlight.min.js?1726990308"></script>
-    <script src="/js/highlight.pack.js?1726990308"></script>
+    <script src="/js/clipboard.min.js?1726990570"></script>
+    <script src="/js/perfect-scrollbar.min.js?1726990570"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1726990570"></script>
+    <script src="/js/jquery.sticky.js?1726990570"></script>
+    <script src="/js/featherlight.min.js?1726990570"></script>
+    <script src="/js/highlight.pack.js?1726990570"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1726990308"></script>
-    <script src="/js/learn.js?1726990308"></script>
-    <script src="/js/hugo-learn.js?1726990308"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1726990570"></script>
+    <script src="/js/learn.js?1726990570"></script>
+    <script src="/js/hugo-learn.js?1726990570"></script>
 
-    <link href="/mermaid/mermaid.css?1726990308" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1726990308"></script>
+    <link href="/mermaid/mermaid.css?1726990570" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1726990570"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
