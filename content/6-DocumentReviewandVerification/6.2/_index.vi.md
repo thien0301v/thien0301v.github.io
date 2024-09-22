@@ -18,6 +18,7 @@ Bây giờ hãy quay lại notebook `04-idp-document-a2i.ipynb`. **Bắt đầu 
 - Nhấp vào URL đăng nhập cổng phân loại
     ![s21](/images/6/s21.png)
 - Đăng nhập vào cổng phân loại/xem xét của con người. Bạn sẽ nhận được một email với liên kết đến cổng phân loại/xem xét con người với thông tin chi tiết về cách đăng nhập và một URL cổng. Làm theo hướng dẫn trong email, bạn sẽ cần đặt lại mật khẩu để đăng nhập. **Start Working**.
+    ![stemp](/images/6/stemp.png)
     ![s22](/images/6/s22.png)
 - Bây giờ bạn có thể xem thông tin đã được trích xuất ở bên phải, để xác minh và thực hiện các thay đổi nếu cần. Gửi công việc khi hoàn thành. Bạn cũng có tùy chọn từ chối và phát hành nhiệm vụ nếu cần.
     ![s23](/images/6/s23.png)
